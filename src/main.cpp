@@ -9,7 +9,7 @@
   WiFiAccessPoint.ino creates a WiFi access point and provides a web server on it.
 
   Steps:
-  1. Connect to the access point "yourAp"
+  1. Connect to the access point "GC123456"
   2. Point your web browser to http://192.168.4.1/H to turn the LED on or http://192.168.4.1/L to turn it off
 */
 
@@ -75,10 +75,6 @@ void loop() {
              String s = MAIN_page; //Read HTML contents
             client.println(s); //Send web page
             client.println();
-
-            // the content of the HTTP response follows the header:
-            //client.print("Click <a href=\"/H\">here</a> to turn ON the LED.<br>");
-            //client.print("Click <a href=\"/L\">here</a> to turn OFF the LED.<br>");
 
             // The HTTP response ends with another blank line:
             client.println();
